@@ -25,6 +25,10 @@ LINKS = "https://github.com/rasta0408-rgb/pb"
 BOT_EVENT_HANDLERS = {}
 PLAYEROK_EVENT_HANDLERS = {}
 router = Router()
+
+from .yang_wizard import router as yang_router
+
+router.include_router(yang_router)
 TELEGRAM_BOT_ROUTERS = [router]
 
 
